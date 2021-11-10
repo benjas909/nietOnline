@@ -12,7 +12,7 @@ posts = [
     {
         "titulo": "¿Quiénes Conforman el grupo?",
         "autor": "NERV1_DEV",
-        "contenido": "El grupo está conformado por Alexander Inostroza, Felipe Quintero, Gonzalo Alarcón y Benjamín Aguilera.",
+        "contenido": "El grupo está conformado por Alexander Inostroza, Felipe Zambrano, Gonzalo Alarcón y Benjamín Aguilera.",
         "fecha": "8/11/2021",
     },
 ]
