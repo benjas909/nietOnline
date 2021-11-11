@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Iconos
 
 
 posts = [
@@ -19,9 +20,12 @@ posts = [
 
 
 def inicio(request):
-    return render(request, "blog/home.html")
+    icons = Iconos.objects.all()
+    context = {"icons":icons}
+    return render(request, "blog/home.html", context)
 
 
 def about(request):
     context = {"posts": posts}
     return render(request, "blog/about.html", context)
+
