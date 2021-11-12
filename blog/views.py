@@ -7,7 +7,7 @@ posts = [
     {
         "titulo": "Bienvenidos a NietOnline!",
         "autor": "NERV1_DEV",
-        "contenido": "Esta página busca ayudar a personas de tercera edad a aprender a usar aplicaciones de sus celulares.",
+        "contenido": "Esta página busca ayudar a personas de tercera edad a aprender a usar las aplicaciones modernas.",
         "fecha": "7/11/2021",
     },
     {
