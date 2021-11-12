@@ -88,3 +88,10 @@ body {
     font-size: 2.5rem;
   }
   
+  .social{
+    /*border:1px solid #000;*/
+    top:50%;
+    height:205px;
+    /*para poner height 192 deberíamos haber indicado en el reset de estilos font-size:0;*/
+    margin-top:0px;
+  }

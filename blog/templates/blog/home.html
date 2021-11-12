@@ -4,13 +4,12 @@
 <nav>
     <ul>
             <h4>Principales buscadas:      (pinche en las fotos)</h4>
+            <div class="social">
             {% for icon in icons %}
-                <div> {{icon}} </div>
-                <img src="/static/blog/img/icons/{{icon}}.jpg" width="auto"
-                height="100">
-                <br>
-                <br>
+                <!--<div> {{icon}} </div>-->
+                <a href="#"><img src="/static/blog/img/icons/{{icon}}.jpg" width="100">{{icon}}</a>
             {% endfor %}
+            </div>
     </ul>
 </nav>
 {% endblock contenido %}
