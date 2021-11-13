@@ -21,7 +21,7 @@ posts = [
 
 def inicio(request):
     icons = Iconos.objects.all()
-    context = {"icons":icons}
+    context = {"icons": icons}
     return render(request, "blog/home.html", context)
 
 
@@ -29,3 +29,22 @@ def about(request):
     context = {"posts": posts}
     return render(request, "blog/about.html", context)
 
+
+def facebook(request):
+    return render(request, "blog/facebook.html")
+
+
+def youtube(request):
+    return render(request, "blog/youtube.html")
+
+
+def instagram(request):
+    return render(request, "blog/instagram.html")
+
+
+def netflix(request):
+    return render(request, "blog/netflix.html")
+
+
+def spotify(request):
+    return render(request, "blog/spotify.html")
