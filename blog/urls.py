@@ -1,5 +1,8 @@
 from django.urls import path
 from . import views
+from . models import Iconos
+
+icons = Iconos.objects.all()
 
 urlpatterns = [
     path("", views.inicio, name="page-home"),
@@ -9,4 +12,10 @@ urlpatterns = [
     path("Instagram/", views.instagram, name="Instagram"),
     path("Netflix/", views.netflix, name="Netflix"),
     path("Spotify/", views.spotify, name="Spotify"),
+    path("search/<str:search>/", views.tutorialPage)
 ]
+'''
+for item in icons:
+    itemName=str(item)
+    urlpatterns.append(path("search/<str:"+itemName+"/", views.tutorialPage, name="page-tuto-"+itemName))
+'''

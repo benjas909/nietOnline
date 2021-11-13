@@ -48,3 +48,8 @@ def netflix(request):
 
 def spotify(request):
     return render(request, "blog/spotify.html")
+
+
+def tutorialPage(request,search="search"):
+    context = {"search": search}
+    return render(request, "blog/tutorialPage.html",context)
