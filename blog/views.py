@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Iconos
+from .models import *
 
 
 posts = [
@@ -48,6 +48,9 @@ def spotify(request):
     return render(request, "blog/spotify.html")
 
 
-def tutorialPage(request,search="search"):
-    context = {"search": search}
-    return render(request, "blog/tutorialPage.html",context)
+def searchPage(request,search="search"):
+    tags = [tag for tag in Tag.objects.all() if tag.name == search]
+    tutorials = Tutorial.objects.filter(tag__in=tags)
+    #tags = Tag.objects.all()
+    context = {"search" : search, "tutorialsList" : tutorials, "tags" : tags}
+    return render(request, "blog/searchPage.html",context)

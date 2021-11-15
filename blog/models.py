@@ -7,10 +7,11 @@ class Iconos(models.Model):
         return self.name
 
 class Tutorial(models.Model):
+    name = models.CharField(max_length=200)
     link = models.CharField(max_length=200)
     description = models.CharField(max_length=2000)
     def __str__(self):
-        return self.link
+        return self.name
 
 class Tag(models.Model):
     name = models.CharField(max_length=100)

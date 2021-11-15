@@ -12,7 +12,7 @@ urlpatterns = [
     path("Instagram/", views.instagram, name="Instagram"),
     path("Netflix/", views.netflix, name="Netflix"),
     path("Spotify/", views.spotify, name="Spotify"),
-    path("search/<str:search>/", views.tutorialPage)
+    path("search/<str:search>/", views.searchPage)
 ]
 '''
 for item in icons:
