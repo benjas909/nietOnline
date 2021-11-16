@@ -12,6 +12,7 @@ urlpatterns = [
     path("Instagram/", views.instagram, name="Instagram"),
     path("Netflix/", views.netflix, name="Netflix"),
     path("Spotify/", views.spotify, name="Spotify"),
+    path("newtutorial/", views.nwtutorial, name="New-tutorial"),
     path("search/<str:search>/", views.searchPage)
 ]
 '''

@@ -47,6 +47,9 @@ def netflix(request):
 def spotify(request):
     return render(request, "blog/spotify.html")
 
+def nwtutorial(request):
+    return render(request, "blog/newtutorial.html")
+
 
 def searchPage(request,search="search"):
     tags = [tag for tag in Tag.objects.all() if tag.name == search]
