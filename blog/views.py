@@ -27,26 +27,6 @@ def about(request):
     context = {"posts": posts}
     return render(request, "blog/about.html", context)
 
-
-def facebook(request):
-    return render(request, "blog/facebook.html")
-
-
-def youtube(request):
-    return render(request, "blog/youtube.html")
-
-
-def instagram(request):
-    return render(request, "blog/instagram.html")
-
-
-def netflix(request):
-    return render(request, "blog/netflix.html")
-
-
-def spotify(request):
-    return render(request, "blog/spotify.html")
-
 def nwtutorial(request):
     return render(request, "blog/newtutorial.html")
 

@@ -7,11 +7,6 @@ icons = Iconos.objects.all()
 urlpatterns = [
     path("", views.inicio, name="page-home"),
     path("info/", views.about, name="page-info"),
-    path("Facebook/", views.facebook, name="Facebook"),
-    path("Youtube/", views.youtube, name="YouTube"),
-    path("Instagram/", views.instagram, name="Instagram"),
-    path("Netflix/", views.netflix, name="Netflix"),
-    path("Spotify/", views.spotify, name="Spotify"),
     path("newtutorial/", views.nwtutorial, name="New-tutorial"),
     path("search/<str:search>/", views.searchPage)
 ]
