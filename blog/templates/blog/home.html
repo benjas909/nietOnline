@@ -1,22 +1,23 @@
 {% extends "blog/base.html" %}
 {% block contenido %}
-    <h1>NietOnline!</h1>
+<h1>NietOnline!</h1>
 <nav>
   <ul>
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-                {% for icon in icons %}
-                <div class="col">
-                  <h1 class="animate__animated animate__fadeInDown">
-                      <div class="card h-100" style="width:150px">
-                        <a href="/search/?q={{icon}}"><img src="/static/blog/img/icons/{{icon}}.png" width="100" class="card-img-top" alt={{icon}}></a>
-                      <div class="card-body">
-                        <h5 class="card-title">{{icon}}</h5>
-                      </div>
-                    </div>
-                  </h1>
-                </div>
-                {% endfor %}
-          </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {% for icon in icons %}
+        <div class="col">
+          <h1 class="animate__animated animate__fadeInDown" style="--delay-animacion: {{ forloop.counter }};" >
+            <div class="card h-100" style="width:150px">
+              <a href="/search/?q={{icon}}"><img src="/static/blog/img/icons/{{icon}}.png" width="100" class="card-img-top" alt={{icon}}></a>
+              <div class="card-body">
+                <h5 class="card-title">{{icon}} {{ forloop.counter }}</h5>
+              </div>
+            </div>
+          </h1>
+        </div>
+      {% endfor %}
+   </div>
   </ul>
+  
 </nav>
 {% endblock contenido %}

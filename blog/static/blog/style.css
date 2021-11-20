@@ -87,11 +87,39 @@ body {
   .account-heading {
     font-size: 2.5rem;
   }
-  
-  .social{
-    /*border:1px solid #000;*/
-    top:50%;
-    height:205px;
-    /*para poner height 192 deberíamos haber indicado en el reset de estilos font-size:0;*/
-    margin-top:0px;
+    
+  .animate__animated.animate__fadeInDown{
+    --animate-delay: var(--delay-animacion)s;
   }
+  
+
+  
+  @keyframes FadeIn { 
+    0% {
+      opacity: 0;
+      transform: scale(.1);
+    }
+  
+    85% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  
+.myClass img {
+  float: left;
+  margin: 20px;
+  animation: FadeIn 1s linear;
+  animation-fill-mode: both;
+}
+
+.myClass img:nth-child(1) { animation-delay: .5s }
+.myClass img:nth-child(2) { animation-delay: 1s }
+.myClass img:nth-child(3) { animation-delay: 1.5s }
+.myClass img:nth-child(4) { animation-delay: 2s }
+  
+
