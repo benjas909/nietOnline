@@ -10,8 +10,3 @@ urlpatterns = [
     path("newtutorial/", views.nwtutorial, name="New-tutorial"),
     path("search/", views.searchPage, name="search-results")
 ]
-'''
-for item in icons:
-    itemName=str(item)
-    urlpatterns.append(path("search/<str:"+itemName+"/", views.tutorialPage, name="page-tuto-"+itemName))
-'''

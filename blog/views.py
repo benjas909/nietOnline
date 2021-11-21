@@ -16,10 +16,21 @@ posts = [
     },
 ]
 
+class simple_tuple:
+    def __init__(self, firstElement, secondElement):
+        self.firstElement = firstElement
+        self.secondElement = secondElement
+    
 
 def inicio(request):
     icons = Iconos.objects.all()
-    context = {"icons": icons}
+    i = 1.5
+    iconList = []
+    interval = 0.1
+    for icon in icons:
+        iconList.append(simple_tuple(icon,str(i)))
+        i += interval
+    context = {"icons": iconList}
     return render(request, "blog/home.html", context)
 
 

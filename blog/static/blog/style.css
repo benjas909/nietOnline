@@ -91,6 +91,16 @@ body {
   .animate__animated.animate__fadeInDown{
     --animate-duration: var(--tiempo-animacion);
   }
+
+  .myFadeInDown{
+    display: inline-block;
+
+    animation: fadeInDown;
+    
+    animation-duration: var(--tiempo-animacion);
+
+  }
+
   
   
   @keyframes FadeIn { 
