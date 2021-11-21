@@ -6,18 +6,24 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
       {% for icon in icons %}
         <div class="col">
-          <h1 class="animate__animated animate__fadeInDown" style="--delay-animacion: {{ forloop.counter }};" >
+          <div class="animate__animated animate__fadeInDown" style="--tiempo-animacion: 1.{{forloop.counter}}s">
             <div class="card h-100" style="width:150px">
               <a href="/search/?q={{icon}}"><img src="/static/blog/img/icons/{{icon}}.png" width="100" class="card-img-top" alt={{icon}}></a>
               <div class="card-body">
-                <h5 class="card-title">{{icon}} {{ forloop.counter }}</h5>
+                <h5 class="card-title">{{icon}}</h5>
               </div>
             </div>
-          </h1>
+          </div>
         </div>
       {% endfor %}
    </div>
   </ul>
   
 </nav>
+
+<script>
+  function multiply(num1,num2){
+    return num1 * num2;
+  }
+</script>
 {% endblock contenido %}

@@ -89,10 +89,9 @@ body {
   }
     
   .animate__animated.animate__fadeInDown{
-    --animate-delay: var(--delay-animacion)s;
+    --animate-duration: var(--tiempo-animacion);
   }
   
-
   
   @keyframes FadeIn { 
     0% {

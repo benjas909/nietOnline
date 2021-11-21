@@ -6,7 +6,8 @@
 
     {% for tutorial in tutorialsList %}
         <h1>"nombre: {{tutorial.name}} link: {{tutorial.link}} descripcion: {{tutorial.description}}</h1>
-
+    {% empty %}
+        <h2>No se encontraron resultados.</h2>
     {% endfor %}    
 
 {% endblock contenido %} 
