@@ -10,9 +10,9 @@ posts = [
         "contenido": "Esta página busca ayudar a personas de tercera edad a aprender a usar las aplicaciones modernas.",
     },
     {
-        "titulo": "¿Quiénes Conforman el grupo?",
+        "titulo": "¿Quiénes conforman NERV1_DEV?",
         "autor": "NERV1_DEV",
-        "contenido": "El grupo está conformado por Alexander Inostroza, Felipe Zambrano, Gonzalo Alarcón y Benjamín Aguilera.",
+        "contenido": "NERV1_DEV está conformado por Alexander Inostroza, Felipe Zambrano, Gonzalo Alarcón y Benjamín Aguilera.",
     },
 ]
 
