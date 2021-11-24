@@ -8,18 +8,18 @@ class Iconos(models.Model):
     def __str__(self):
         return self.name
 
-class Tutorial(models.Model):
-    name = models.CharField(max_length=200)
-    link = models.CharField(max_length=200)
-    description = models.CharField(max_length=2000)
+class Tag(models.Model):
+    name = models.CharField(max_length=100)
     class Meta:
         ordering = ["name"]
     def __str__(self):
         return self.name
 
-class Tag(models.Model):
-    name = models.CharField(max_length=100)
-    tutorials = models.ManyToManyField(Tutorial)
+class Tutorial(models.Model):
+    name = models.CharField(max_length=200)
+    link = models.CharField(max_length=200)
+    description = models.CharField(max_length=2000)
+    tags = models.ManyToManyField(Tag)
     class Meta:
         ordering = ["name"]
     def __str__(self):

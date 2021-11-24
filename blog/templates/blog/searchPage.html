@@ -8,6 +8,14 @@
         <h1>"nombre: {{tutorial.name}} link: {{tutorial.link}} descripcion: {{tutorial.description}}</h1>
     {% empty %}
         <h2>No se encontraron resultados.</h2>
-    {% endfor %}    
+    {% endfor %}
+
+    <br>
+    <h4>Búsquedas relacionadas:</h4>
+    {% for tag in tags %}
+        <a href="/search/?q={{tag}}"><button type="button" class="btn btn-outline-success">{{tag}}</button></a>
+    {% empty %}
+        <h6> Nope! </h6>
+    {% endfor %}
 
 {% endblock contenido %} 

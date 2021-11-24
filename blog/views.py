@@ -43,8 +43,7 @@ def nwtutorial(request):
 
 def searchPage(request):
     search = request.GET["q"]
-    tags = [tag for tag in Tag.objects.all() if tag.name.lower() == search.lower()]
-    tutorials = Tutorial.objects.filter(tag__in=tags)
-    #tags = Tag.objects.all()
+    tags = [tag for tag in Tag.objects.all() if tag.name.lower() in search.lower()]
+    tutorials = Tutorial.objects.filter(tags__in=tags).distinct()
     context = {"search" : search, "tutorialsList" : tutorials, "tags" : tags}
     return render(request, "blog/searchPage.html",context)
