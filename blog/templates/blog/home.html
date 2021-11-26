@@ -1,30 +1,32 @@
 {% extends "blog/base.html" %}
 {% block contenido %}
 <h1>NietOnline!</h1>
-<nav>
-  <ul>
-    <div class="row row-cols-1 row-cols-md-3 g-2">
+
+    <div class="container">
+    <div class="row justify-content-start">
       {% for icon in icons %} <!-- each icon is a tuple -->
-        <div class="col">
           <!--<div class="animate__animated animate__fadeInDown animate__delay-1s" style="--tiempo-animacion: 1.{{forloop.counter}}s">-->
           <div class="myFadeInDown" style="--tiempo-animacion: {{icon.secondElement}}s;">
-            <div class="card h-100" style="width:150px">
-              <a href="/search/?q={{icon.firstElement}}"><img src="/static/blog/img/icons/{{icon.firstElement}}.png" width="100" class="card-img-top" alt={{icon.firstElement}}></a>
+            <div class="card h-100" style="width:150px;">
+              <a href="/search/?q={{icon.firstElement}}"><img src="/static/blog/img/icons/{{icon.firstElement}}.png" width="150" height="150" class="card-img-top" alt={{icon.firstElement}}></a>
               <div class="card-body">
                 <h6 class="card-title">{{icon.firstElement}}</h6>
               </div>
             </div>
           </div>
-        </div>
       {% endfor %}
-   </div>
-  </ul>
+     
+    </div>
   
-</nav>
 
-<script>
-  function multiply(num1,num2){
-    return num1 * num2;
-  }
-</script>
+  <div class="container">
+    <div class="row g-1">
+      <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+    </div>
+  </div>
+  </div>
+   
+
 {% endblock contenido %}
