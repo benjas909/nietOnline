@@ -30,7 +30,7 @@
             </button>
             <a class="navbar-brand mr-4" href="{% url 'page-home' %}">NietOnline!</a>
             <!-- search bar -->
-            <form class="form-inline" action="{% url 'search-results' %}" method="get">
+            <form class="d-flex" action="{% url 'search-results' %}" method="get">
               <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name="q">
               <button class="btn btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
             </form>
@@ -56,7 +56,7 @@
             {% block contenido %}{% endblock %}
           </div>
           <div class="col-md-4">
-            <div class="content-section">
+            <div class="content-section" style="position: absolute;">
               <h3>Barra de navegación</h3>
               <p class='text-muted'>Usa los siguientes botones para moverte por la página
                 <ul class="list-group">
