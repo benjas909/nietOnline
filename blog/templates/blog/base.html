@@ -23,10 +23,10 @@
 </head>
 <body>
     <header class="site-header">
-        <nav class="navbar navbar-nav navbar-dark badge-success fixed-top ">
-          <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-nav navbar-dark fixed-top " style="background-color: #008080;">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand mr-4" href="{% url 'page-home' %}">NietOnline!</a>
             <!-- search bar -->
@@ -35,7 +35,7 @@
               <button class="btn btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
             </form>
 
-            <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
               <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link" href="{% url 'page-home' %}">Home</a>
                 <a class="nav-item nav-link" href="{% url 'page-info' %}">Sobre el proyecto</a>
