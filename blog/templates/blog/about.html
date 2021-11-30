@@ -1,6 +1,19 @@
 {% extends "blog/base.html" %}
+
+{% block tab %}
+<title>Nietonline!</title>
+
+<!-- icon in tab -->
+<!-- Image from the public domain (placeholder) -->
+<link rel = "icon" href = 
+"https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/N_on_green_and_black.svg/420px-N_on_green_and_black.svg.png" 
+        type = "image/x-icon">
+
+
+{% endblock tab %}
+
 {% block contenido %}
-<title>NietOnline! - Info</title>
+
     <h1>Quiénes Somos</h1>
     {% for post in posts %}
     <article class="media content-section">
@@ -13,4 +26,5 @@
         </div>
       </article>
     {% endfor %}
-{% endblock contenido %}
+
+    {% endblock contenido %}
