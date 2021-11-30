@@ -16,11 +16,12 @@ posts = [
     },
 ]
 
+
 class simple_tuple:
     def __init__(self, firstElement, secondElement):
         self.firstElement = firstElement
         self.secondElement = secondElement
-    
+
 
 def inicio(request):
     icons = Iconos.objects.all()
@@ -28,7 +29,7 @@ def inicio(request):
     iconList = []
     interval = 0.1
     for icon in icons:
-        iconList.append(simple_tuple(icon,str(i)))
+        iconList.append(simple_tuple(icon, str(i)))
         i += interval
     context = {"icons": iconList}
     return render(request, "blog/home.html", context)
@@ -38,14 +39,18 @@ def about(request):
     context = {"posts": posts}
     return render(request, "blog/about.html", context)
 
+
 def tutorial(request, tutorial=""):
-    tutorials = [tuto for tuto in Tutorial.objects.all() if tuto.name.lower() == tutorial.lower()]
-    context = {"tutorials" : tutorials}
+    tutorials = [
+        tuto for tuto in Tutorial.objects.all() if tuto.name.lower() == tutorial.lower()
+    ]
+    context = {"tutorials": tutorials}
     return render(request, "blog/tutorial.html", context)
+
 
 def searchPage(request):
     search = request.GET["q"]
     tags = [tag for tag in Tag.objects.all() if tag.name.lower() in search.lower()]
     tutorials = Tutorial.objects.filter(tags__in=tags).distinct()
-    context = {"search" : search, "tutorialsList" : tutorials, "tags" : tags}
-    return render(request, "blog/searchPage.html",context)
+    context = {"search": search, "tutorialsList": tutorials, "tags": tags}
+    return render(request, "blog/searchPage.html", context)
