@@ -1,17 +1,8 @@
 {% extends "blog/base.html" %} 
 
 {% block tab %}
-<title>Nietonline! - {{search}}</title>
-<!--TENGO Q ARREGLAR ESTO -BENJAS -->
-    {% if "/static/blog/img/icons/{{search}}.png" %}
-        <link rel = "icon" href = 
-        "/static/blog/img/icons/{{search}}.png" 
-                type = "image/x-icon">
-    {% else %}
-        <link rel = "icon" href = 
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/N_on_green_and_black.svg/420px-N_on_green_and_black.svg.png" 
-                type = "image/x-icon">
-    {% endif %}
+<title>Nietonline! - Resultados de búsqueda para: {{search}}</title>
+
 
 {% endblock tab %}
 
