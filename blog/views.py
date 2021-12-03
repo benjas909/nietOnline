@@ -40,12 +40,12 @@ def about(request):
     return render(request, "blog/about.html", context)
 
 
-def tutorial(request, tutorial=""):
+'''def tutorial(request, tutorial=""):
     tutorials = [
         tuto for tuto in Tutorial.objects.all() if tuto.name.lower() == tutorial.lower()
     ]
     context = {"tutorials": tutorials}
-    return render(request, "blog/tutorial.html", context)
+    return render(request, "blog/tutorial.html", context)'''
 
 
 def searchPage(request):

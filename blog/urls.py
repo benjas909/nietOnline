@@ -7,7 +7,6 @@ icons = Iconos.objects.all()
 urlpatterns = [
     path("", views.inicio, name="page-home"),
     path("info/", views.about, name="page-info"),
-    path("tutorial/<str:tutorial>/", views.tutorial, name="tutorial"),
     path("search/", views.searchPage, name="search-results")
 ]
 
