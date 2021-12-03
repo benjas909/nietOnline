@@ -2,6 +2,7 @@ body {
   background: #fafafa;
   color: #333333;
   margin-top: 5rem;
+  background-image: url(/static/blog/img/icons/cielo-con-nubes.jpg);
 }
 
 h1,
