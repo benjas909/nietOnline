@@ -2,7 +2,20 @@ body {
   background: #fafafa;
   color: #333333;
   margin-top: 5rem;
-  background-image: url(/static/blog/img/icons/cielo-con-nubes.jpg);
+  background: #c2e59c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #c2e59c, #64b3f4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
 
 h1,

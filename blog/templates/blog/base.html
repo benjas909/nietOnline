@@ -26,12 +26,12 @@
 </head>
 <body>
     <header class="site-header">
-        <nav class="navbar navbar-nav navbar-dark fixed-top" style="background-color: #008080;">
+        <nav class="navbar navbar-nav navbar-dark fixed-top" style="background-color: #c2e59c;">
           <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mr-4" href="{% url 'page-home' %}">NietOnline!</a>
+            <a class="navbar-brand mr-4" href="{% url 'page-home' %}" style="color: rgb(0, 0, 0);">NietOnline!</a>
             <!-- search bar -->
             <form class="d-flex" action="{% url 'search-results' %}" method="get">
               <input class="form-control mr-sm-2" type="text" placeholder="Buscar" name="q">
