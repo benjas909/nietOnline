@@ -1,22 +1,23 @@
 body {
+  
+  margin-top: 5rem;
   min-height:100vh;
+  
   background: #fafafa;
   color: #333333;
-  margin-top: 5rem;
-  background: #c2e59c;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #c2e59c, #64b3f4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #c2e59c;
+  background: -webkit-linear-gradient(to bottom, #64b3f4, #c2e59c);
+  background: linear-gradient(to bottom, #c2e59c, #64b3f4);
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  /* OTRA OPCION DE FONDO: */
+  /* 
+  background-color: #d5d5d5;
+  opacity: 1;
+  background: linear-gradient(135deg, #e9e9e955 25%, transparent 25%) -17px 0/ 34px 34px, 
+  linear-gradient(225deg, #e9e9e9 25%, transparent 25%) -17px 0/ 34px 34px, 
+  linear-gradient(315deg, #e9e9e955 25%, transparent 25%) 0px 0/ 34px 34px, 
+  linear-gradient(45deg, #e9e9e9 25%, #d5d5d5 25%) 0px 0/ 34px 34px;
+  */
 }
 
 h1,
@@ -126,31 +127,13 @@ a.article-title:hover {
   }
 }
 
-.myClass img {
-  float: left;
-  margin: 20px;
-  animation: FadeIn 1s linear;
-  animation-fill-mode: both;
-}
-
-.myClass img:nth-child(1) {
-  animation-delay: 0.5s;
-}
-.myClass img:nth-child(2) {
-  animation-delay: 1s;
-}
-.myClass img:nth-child(3) {
-  animation-delay: 1.5s;
-}
-.myClass img:nth-child(4) {
-  animation-delay: 2s;
-}
 
 .card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2.5px);
   -webkit-backdrop-filter: blur(2.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+

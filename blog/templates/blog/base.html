@@ -26,7 +26,13 @@
 </head>
 <body>
     <header class="site-header">
-        <nav class="navbar navbar-nav navbar-light fixed-top" style="background-color: #c2e59c;">
+        <nav class="navbar navbar-nav navbar-light fixed-top" 
+            style="background: rgba(255, 255, 255, 0.25);
+                  box-shadow: 0 4px 32px 0 rgba(31, 38, 135, 0.37);
+                  backdrop-filter: blur(4px);
+                  -webkit-backdrop-filter: blur(4px);
+                  border: 1px solid rgba(255, 255, 255, 0.18);
+              ">
           <div class="container-fluid">
             <button class="navbar-toggler" type="button" style="background-color: #5cb88d3b; outline-style:groove;" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
@@ -65,9 +71,21 @@
               <h3 style="text-align: center;">Barra de navegación</h3>
               <p class='text-muted' style="text-align: center;">Usa los siguientes botones para moverte por la página
                 <ul class="list-group">
-                  <li class="list-group-item list-group-item-light"><a href="{% url 'page-home' %}">Inicio</a></li>
-                  <li class="list-group-item list-group-item-light"><a href="{% url 'page-info' %}">Sobre el proyecto</a></li>
-                  <li class="list-group-item list-group-item-light"><a href="/search/?q=Youtube">YouTube</a></li>
+                  <li class="list-group-item list-group-item-light" style="background: rgba(255, 255, 255, 0.1);
+                  backdrop-filter: blur(4px);
+                  -webkit-backdrop-filter: blur(4px);
+                  border: 1px solid rgba(255, 255, 255, 0.18);
+              "><a href="{% url 'page-home' %}">Inicio</a></li>
+                  <li class="list-group-item list-group-item-light"style="background: rgba(255, 255, 255, 0.1);
+                  backdrop-filter: blur(4px);
+                  -webkit-backdrop-filter: blur(4px);
+                  border: 1px solid rgba(255, 255, 255, 0.18);
+              "><a href="{% url 'page-info' %}">Sobre el proyecto</a></li>
+                  <li class="list-group-item list-group-item-light"style="background: rgba(255, 255, 255, 0.1);
+                  backdrop-filter: blur(4px);
+                  -webkit-backdrop-filter: blur(4px);
+                  border: 1px solid rgba(255, 255, 255, 0.18);
+              "><a href="/search/?q=Youtube">YouTube</a></li>
                 </ul>
               </p>
             </div>
