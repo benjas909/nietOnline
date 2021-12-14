@@ -40,17 +40,10 @@ def about(request):
     return render(request, "blog/about.html", context)
 
 
-'''def tutorial(request, tutorial=""):
-    tutorials = [
-        tuto for tuto in Tutorial.objects.all() if tuto.name.lower() == tutorial.lower()
-    ]
-    context = {"tutorials": tutorials}
-    return render(request, "blog/tutorial.html", context)'''
-
-
 def searchPage(request):
     search = request.GET["q"]
     tags = [tag for tag in Tag.objects.all() if tag.name.lower() in search.lower()]
-    tutorials = Tutorial.objects.filter(tags__in=tags).distinct()
-    context = {"search": search, "tutorialsList": tutorials, "tags": tags}
+    tutorials = Tutorial.objects.filter(tags__in = tags).distinct()
+    related_tags = Tag.objects.filter(tutorial__in  = tutorials).distinct()
+    context = {"search": search, "tutorialsList": tutorials, "tags": tags, "related": related_tags}
     return render(request, "blog/searchPage.html", context)

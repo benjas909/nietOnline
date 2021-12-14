@@ -58,7 +58,7 @@
 
     <br>
     <h4>Búsquedas relacionadas:</h4>
-    {% for tag in tags %}
+    {% for tag in related %}
         <a href="/search/?q={{tag}}"><button type="button" class="btn btn-outline-success" >{{tag}}</button></a>
     {% empty %}
         <h6> Nope! </h6>
