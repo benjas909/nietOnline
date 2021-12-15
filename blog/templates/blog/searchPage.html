@@ -11,24 +11,23 @@
     <h4>Resultados para: {{search}}</h4>
     <!--<a href="#"><img src="/static/blog/img/icons/{{search}}.png" width="100" class="card-img-top" alt={{search}}></a>-->
 
-
     {% for tutorial in tutorialsList %}
-    <article class="media content-section" style="background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(2.5px);
-    -webkit-backdrop-filter: blur(2.5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);">
-    <div class="media-body">
-        <h1>{{tutorial.name}}</h1>
-        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#a{{tutorial.id}} ">
+      <article class="media content-section" style="background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(2.5px);
+      -webkit-backdrop-filter: blur(2.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);">
+        <div class="media-body">
+          <h1>{{tutorial.firstElement.name}}</h1>
+          <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#a{{tutorial.firstElement.id}} ">
             Reproducir Video
           </button>
         </div>
       </article>
-
+    
           <!-- Modal -->
-          <div class="modal fade" id="a{{tutorial.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+          <div class="modal fade" id="a{{tutorial.firstElement.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
             <div class="modal-dialog" >
               <div class="modal-content" style="width: 675px;
                                       background: rgba(255, 255, 255, 0.55);
@@ -42,7 +41,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body center">
-                  <iframe width="640" height="360" src='{{tutorial.link}}' title="YouTube video player" 
+                  <iframe width="640" height="360" src='{{tutorial.firstElement.link}}' title="YouTube video player" 
                         frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></iframe>
                 </div>

@@ -45,5 +45,11 @@ def searchPage(request):
     tags = [tag for tag in Tag.objects.all() if tag.name.lower() in search.lower()]
     tutorials = Tutorial.objects.filter(tags__in = tags).distinct()
     related_tags = Tag.objects.filter(tutorial__in  = tutorials).distinct()
-    context = {"search": search, "tutorialsList": tutorials, "tags": tags, "related": related_tags}
+    i=1
+    interval = 0.1
+    tutorials_list =[]
+    for tutorial in tutorials:
+        tutorials_list.append(simple_tuple(tutorial, str(i)))
+        i += interval
+    context = {"search": search, "tutorialsList": tutorials_list, "tags": tags, "related": related_tags}
     return render(request, "blog/searchPage.html", context)
